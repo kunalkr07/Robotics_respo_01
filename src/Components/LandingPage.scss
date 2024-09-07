@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+$textColor: #7400b8;
+$headingColor: #003049;
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.landing-container {
+  height: 650px;
+  width: 100%;
+  background-color: $textColor;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("/back.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  header {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 2%;
+  }
+
+  i {
+    color: white;
+    display: none;
+    margin-right: 50px;
+  }
+
+  .landingPage-logo {
+    h2 {
+      color: #fff;
+      float: left;
+      margin-left: 50px;
+    }
+  }
+
+  .list {
+    float: right;
+    display: flex;
+
+    li {
+      font-size: 16px;
+      list-style: none;
+
+      a {
+        color: white;
+        margin: 20px;
+      }
+    }
+  }
+
+  .icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+  }
+
+  @media screen and (max-width: 600px) {
+    .landing-container {
+      height: 1100px;
+      width: auto;
+    }
+
+    .icon {
+      display: block;
+      margin-right: 30px;
+    }
+
+    .list {
+      flex-direction: column;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 38px;
+      right: 0px;
+      z-index: 999;
+      background-color: rgba(255, 255, 255, 0.055);
+      backdrop-filter: blur(15px);
+      width: 100%;
+      height: 400px;
+      text-align: Center;
+      padding: 10px;
+
+      &.active {
+        display: flex;
+      }
+
+      li {
+        margin: 10px 0;
+      }
+    }
+  }
+}
+
+.form-container-box {
+  height: 500px;
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .form-container {
+    color: white;
+    height: 400px;
+    width: 100%;
+    background-color: #002f4908;
+    backdrop-filter: blur(20px);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .form-text1 {
+      font-size: 1.02rem;
+    }
+
+    .form-head {
+      font-size: 3rem;
+      margin: 20px 0px 20px 0px;
+    }
+
+    .form-text2 {
+      font-size: 1.02rem;
+    }
+
+    .form-btn {
+      height: 35px;
+      width: 170px;
+      border-radius: 30px;
+      border: none;
+      position: absolute;
+      bottom: 30px;
+      background-color: #0077b6;
+    }
+
+    a {
+      color: #fff;
+    }
+
+    .form-btn:hover {
+      opacity: 0.5;
+    }
+  }
+  
+      @media screen and (max-width:480px) {
+       .form-container{
+        height:530px;
+      
+       }
+      }
+     
+      @media screen and (max-width:350px) {
+      .form-text2{
+       margin-bottom:10px;
+      }
+
+        .form-head {
+          font-size: 1.5rem;
+          margin:10px;
+        }
+         }
+}
